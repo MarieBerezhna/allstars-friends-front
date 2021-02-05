@@ -1,58 +1,114 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <div id="hero" class="container position-relative">
+      <div class="row hero-content mx-auto position-lg-absolute w-100 h-100">
+        <div class="col-12 col-lg-8 text-white pt-lg-5">
+          <h1 class="display-lg-4 pt-lg-5">RECCOMEND YOUR <br>
+            FRIEND AND GET <br>
+            1000$ - 2000$ BONUS!
+
+          </h1>
+          <p class="h3">Tell your friends about the opportunities <br> at AllStarsIT</p>
+        </div>
+        <div class="col-12 col-lg-4 p-3 pt-0">
+          <form action="/" class="bg-white position-relative h-auto pb-3 row p-3 pt-0 border-radius-big">
+            <div class="col-12 col-lg-6">
+              <label for="name">name</label>
+              <input type="text" name="name" id="name" v-model="name" placeholder="name"
+                class="w-100 border-radius my-2 p-2 border">
+            </div>
+            <div class="col-12 col-lg-6">
+              <label for="email">email</label>
+              <input type="text" name="email" id="email" v-model="email" placeholder="email"
+                class="w-100 border-radius my-2 p-2 border">
+            </div>
+            <div class="col-12 col-lg-6">
+              <label for="fname">fname</label>
+              <input type="text" name="fname" id="fname" v-model="fname" placeholder="friend's name"
+                class="w-100 border-radius my-2 p-2 border">
+            </div>
+            <div class="col-12 col-lg-6">
+              <label for="femail">femail</label>
+              <input type="text" name="femail" id="femail" v-model="femail" placeholder="friend's email"
+                class="w-100 border-radius my-2 p-2 border">
+            </div>
+            <div class="col-12">
+              <input @click="getFile()" @change="sendFile()" type="file" class="d-none file">
+              <input @click="triggerUpload($event)" type="button" value="CV" placeholder="CV"
+                class="w-100 border-radius my-2 p-2 border cursor-pointer">
+            </div>
+            <div class="col-12 position-relative pt-3 mt-4" style="min-height: 40px">
+              <button type="submit" class="btn btn-purple w-100 border-radius">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <HowItWorks id="how" class="section" />
   </div>
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
+  import $ from 'jquery';
+  import HowItWorks from '@/components/sections/HowItWorks';
+  export default {
+    components: {
+      HowItWorks
+    },
+    data() {
+      return {
+        name: '',
+        email: '',
+        fname: '',
+        femail: '',
+        resume: ''
+      }
+    },
+    methods: {
+      triggerUpload(e) {
+        let fileInp = $(e.target).parent().find('.file')[0];
+        $(fileInp).trigger('click');
+      },
+      getFile() {},
+      sendFile() {
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+      },
+      submit() {
+
+      }
+    }
+  }
+</script>
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  #hero {
+    height: auto;
+    min-height: 100vh;
+  }
+  .hero-content {
+    padding-top: 15vh;
+  }
+
+  h1 {
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.75);
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  form input {
+    background-color: #ddd;
+  }
+
+  label {
+    font-size: 0;
+  }
+
+  .section {
+    min-height: 100vh;
+    padding: 50px;
+  }
+
+  @media (min-width: 992px) {
+    h1 { font-size: 2.5rem;}
+    .hero-content { padding-top: 50vh;}
+  }
 </style>
