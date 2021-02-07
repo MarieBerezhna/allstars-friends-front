@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-1 font-weight-bold">
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-1">
         <a class="navbar-brand logo" href="/">
             <img :src="require('@/assets/logo.png')" alt="Allstars-IT">
         </a>
@@ -43,8 +43,7 @@
     .navbar, .navbar-dark {
         background: black;
         opacity: 0.75;
-        font-size: 1.2rem;
-        line-height: 30px;
+
     }
     @media (min-width: 992px) {
         .navbar-center {
@@ -53,7 +52,7 @@
             transform: translatex(-50%);
         }
         .navbar-brand {
-            margin-left: 17vw;
+            margin-left: 10vw;
         }
         .nav-item {
             margin-left: 2vw;
