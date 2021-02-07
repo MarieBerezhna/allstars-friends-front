@@ -24,3 +24,4 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 Contains: Vuex, vue-router, bootstrap, jquery
+"# allstars-friens" 
