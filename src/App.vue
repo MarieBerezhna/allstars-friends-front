@@ -82,7 +82,7 @@ body > * {
   bottom: 7px;
 }
 .box-shadow {
-      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
   @media (min-width: 992px) {
     body {

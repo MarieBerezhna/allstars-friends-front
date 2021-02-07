@@ -1,10 +1,10 @@
 <template>
-    <div class="container-fluid bg-white">
-        <h2 class="font-size-bold w-100 text-center">How it works</h2>
-        <div class="container">
+    <div class="container-fluid bg-white pb-5">
+        <h2 class="font-size-bold w-100 text-center">Join Our Team In 4 Simple Steps</h2>
+        <div class="container pb-5">
             <div class="row py-3">
                 <div class="col-12 col-lg-6 order-0 order-lg-1 text-center">
-                    <span class="h6 w-100 text-center font-size-bold"> Join our team in 5 easy steps</span>
+                    <!-- <span class="h6 w-100 text-center font-size-bold"> Join our team in 5 easy steps</span> -->
                     <div class="container-fluid py-4">
                         <div class="row border-radius-big bg-white border border-top-0  my-2">
                             <div class="col-12 col-lg-3 my-2 text-center">
@@ -59,13 +59,3 @@
             </div>
         </div>
 </template>
-
-<script>
-    export default {
-
-    }
-</script>
-
-<style scoped>
-
-</style>

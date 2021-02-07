@@ -45,15 +45,18 @@
       </div>
     </div>
     <HowItWorks id="how" class="section" />
+    <WhyUs id="why" class="section" />
   </div>
 </template>
 
 <script>
   import $ from 'jquery';
   import HowItWorks from '@/components/sections/HowItWorks';
+  import WhyUs from '@/components/sections/WhyUs';
   export default {
     components: {
-      HowItWorks
+      HowItWorks,
+      WhyUs
     },
     data() {
       return {
@@ -104,11 +107,11 @@
 
   .section {
     min-height: 100vh;
-    padding: 50px;
   }
 
   @media (min-width: 992px) {
     h1 { font-size: 2.5rem;}
     .hero-content { padding-top: 50vh;}
+    .section { padding: 70px; padding-top: 100px; }
   }
 </style>

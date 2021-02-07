@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-1">
         <a class="navbar-brand logo" href="/">
-            <img :src="require('@/assets/logo.png')" alt="Allstars-IT">
+            <img :src="require('@/assets/logo.png')" alt="Allstars-IT" width="200" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +43,6 @@
     .navbar, .navbar-dark {
         background: black;
         opacity: 0.75;
-
     }
     @media (min-width: 992px) {
         .navbar-center {
@@ -52,7 +51,7 @@
             transform: translatex(-50%);
         }
         .navbar-brand {
-            margin-left: 10vw;
+            margin-left: 15vw;
         }
         .nav-item {
             margin-left: 2vw;
