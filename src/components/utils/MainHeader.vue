@@ -47,7 +47,7 @@
     @media (min-width: 992px) {
         .navbar-center {
             position: absolute;
-            left: 50%;
+            left: 60%;
             transform: translatex(-50%);
         }
         .navbar-brand {
