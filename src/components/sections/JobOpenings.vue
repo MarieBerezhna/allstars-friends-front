@@ -1,11 +1,11 @@
 <template>
-    <div class="container-fluid bg-white">
-        <h2 class="font-size-bold w-100 text-center">Hot Vacancies</h2>
+    <div class="container-fluid bg-white  pt-5">
+        <h2 class="font-size-bold w-100 text-center my-3">Hot Vacancies</h2>
         <div class="container py-3">
             <div class="row">
                 <div class="col-12 col-lg-5  text-center">
-                    <img :src="require('@/assets/jobs.png')" alt="hot job openings" class="w-100">
-                    <p class="text-left p-3 font-weight-bold">
+                    <img :src="require('@/assets/jobs.png')" alt="hot job openings" class="w-75">
+                    <p class="text-left p-3 font-weight-bold lead">
                         Get $1000 for recommending your friend or colleague for Middle/Senior position after they sign
                         an offer.<br>
                         Get $2000 for recommending your friend or colleague for Team Lead, Tech Lead, Senior Devops or

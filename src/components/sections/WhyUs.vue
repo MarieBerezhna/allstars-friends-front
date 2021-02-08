@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid bg-light pt-5">
-<h2 class="font-size-bold w-100 text-center mt-5">Why Work With Us</h2>
+<h2 class="font-size-bold w-100 text-center my-3">Why Work With Us</h2>
    <div class="container pt-3">
        <div class="row">
            <div class="col-12 col-lg-4 why-card-wrapper">

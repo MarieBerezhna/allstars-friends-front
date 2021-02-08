@@ -1,7 +1,7 @@
 <template>
-    <div class="container-fluid bg-white pb-5">
-        <h2 class="font-size-bold w-100 text-center">Join Our Team In 4 Simple Steps</h2>
-        <div class="container pb-5">
+    <div class="container-fluid bg-white py-5">
+        <h2 class="font-size-bold w-100 text-center my-3">Join Our Team In 4 Simple Steps</h2>
+        <div class="container">
             <div class="row py-3">
                 <div class="col-12 col-lg-6 order-0 order-lg-1 text-center">
                     <!-- <span class="h6 w-100 text-center font-size-bold"> Join our team in 5 easy steps</span> -->

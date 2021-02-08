@@ -18,8 +18,18 @@
                         
                     </ul>
                 </div>
-                <div class="col-12 col-lg-6 text-center">
-                    social stuff
+                <div class="col-10 col-lg-5 py-5 pl-lg-5 text-center text-dark social-links mx-auto">
+                    <div class="row pt-lg-5 pl-lg-5 mt-lg-5">
+ 
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-telegram" ></a>
+    
+
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -44,4 +54,28 @@ a {
     color: #fff;
     margin: 20px 0;
 }
+.social-links a {
+    color:#343A40;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    padding: 10px 4px;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 50%;
+}
+.social-links a:hover {
+     text-decoration: none;
+}
+  @media (min-width: 992px) {
+      .social-links a {
+
+              width: 50px;
+    height: 50px;
+              padding: 10px 4px;
+    font-size: 30px;
+    margin: 10px;
+      }
+  }
+
 </style>
