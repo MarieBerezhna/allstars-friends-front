@@ -9,17 +9,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav navbar-center">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="#how">How it works</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#why">Why work with us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#terms">Terms and conditions</a>
+                    <a class="nav-link" href="#jobs">All vacancies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#jobs">All vacancies</a>
+                    <a class="nav-link" href="#terms">Terms and conditions</a>
                 </li>
             </ul>
         </div>
@@ -27,8 +27,31 @@
 </template>
 
 <script>
+import $ from 'jquery';
     export default {
-
+        methods: {
+            menuActivateSwitch () {
+                
+                let mainNavLinks = $(".nav-link");
+                window.document.body.onscroll = (() => {
+                    let fromTop = $(window).scrollTop() + 300;
+                    $(mainNavLinks).each((el) => {
+                        let item = $(mainNavLinks[el])[0];
+                        let sid = $(item).attr('href');
+                        let s = $(sid)[0];
+                        if (s && s.offsetTop <= fromTop &&
+                            s.offsetTop + s.offsetHeight > fromTop) {
+                            $(item).addClass("active");
+                        } else {
+                            $(item).removeClass("active");
+                        }
+                    })
+                })
+            }
+        },
+        mounted() {
+            this.menuActivateSwitch();
+        }
     }
 </script>
 

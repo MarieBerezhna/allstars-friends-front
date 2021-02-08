@@ -46,6 +46,7 @@
     </div>
     <HowItWorks id="how" class="section" />
     <WhyUs id="why" class="section" />
+    <JobOpenings id="jobs" class="section" />
   </div>
 </template>
 
@@ -53,10 +54,12 @@
   import $ from 'jquery';
   import HowItWorks from '@/components/sections/HowItWorks';
   import WhyUs from '@/components/sections/WhyUs';
+  import JobOpenings from '@/components/sections/JobOpenings';
   export default {
     components: {
       HowItWorks,
-      WhyUs
+      WhyUs,
+      JobOpenings
     },
     data() {
       return {
