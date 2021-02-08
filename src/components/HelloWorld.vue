@@ -115,6 +115,6 @@
   @media (min-width: 992px) {
     h1 { font-size: 2.5rem;}
     .hero-content { padding-top: 50vh;}
-    .section { padding: 70px; padding-top: 100px; }
+    .section { padding: 70px; }
   }
 </style>
