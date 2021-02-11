@@ -3,17 +3,17 @@
         <div class="container text-light pt-5">
             <div class="row">
                 <div class="col-12 col-lg-6">
-                     <img :src="require('@/assets/logo.png')" alt="Allstars-IT" width="250" height="auto">
+                     <img :src="require('@/assets/logo.png')" alt="Allstars-IT" width="150" height="auto">
                     <ul class="row py-4">
                         <div class="col-12 col-lg-6">
-                            <a href="">About us</a>
-                            <a href="">Contact us</a>
-                            <a href="">Blog</a>
+                            <a target="_blank" href="https://allstars-it.com/">About us</a>
+                            <a target="_blank" href="https://allstars-it.com/ukraine/contact-us/">Contact us</a>
+                            <a target="_blank" href="https://allstars-it.com/ukraine/blog/">Blog</a>
                         </div>
                         <div class="col-12 col-lg-6">
-                            <a href="">Careers</a>
-                            <a href="">Services</a>
-                            <a href="">Terms and conditions</a>
+                            <a target="_blank" href="https://allstars-it.com/ukraine/careers/">Careers</a>
+                            <a target="_blank" href="https://allstars-it.com/ukraine/services/">Services</a>
+                            <a target="_blank" href="">Terms and conditions</a>
                         </div>
                         
                     </ul>
@@ -21,11 +21,11 @@
                 <div class="col-10 col-lg-5 py-5 pl-lg-5 text-center text-dark social-links mx-auto">
                     <div class="row pt-lg-5 pl-lg-5 mt-lg-5">
  
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-telegram" ></a>
+                    <a target="_blank" href="https://www.facebook.com/allstarsitcom" class="fa fa-facebook"></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/allstars-it-ukraine/" class="fa fa-linkedin"></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCDy8_6Z0qY8RxDVrxTXGazA" class="fa fa-youtube"></a>
+                    <a target="_blank" href="https://www.instagram.com/allstarsitcom/" class="fa fa-instagram"></a>
+                    <a target="_blank" href="https://tgrm.su/ukr/tech/allstarsitukraine" class="fa fa-telegram" ></a>
     
 
                     </div>
@@ -53,6 +53,10 @@ a {
     display: block;
     color: #fff;
     margin: 20px 0;
+}
+a:hover {
+    color: #CCC;
+    text-decoration: none;
 }
 .social-links a {
     color:#343A40;
