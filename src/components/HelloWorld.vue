@@ -38,7 +38,7 @@
                 class="w-100 border-radius my-2 p-2 border cursor-pointer">
             </div>
             <div class="col-12 position-relative pt-3 mt-4" style="min-height: 40px">
-              <button type="submit" class="btn btn-purple w-100 border-radius">Submit</button>
+              <button @click.prevent="submit()" type="submit" class="btn btn-purple w-100 border-radius">Submit</button>
             </div>
           </form>
         </div>
@@ -80,7 +80,19 @@
 
       },
       submit() {
-
+        let data = {
+          name: this.name,
+          email: this.email,
+          fname: this.fname,
+          femail: this.femail,
+          // resume: this.resume
+        };
+        this.$store.dispatch('apply', data);
+        if (data.name.length && data.email.length && data.fname.length && data.femail.length) {
+          // send to server
+        } else {
+          // display err
+        }
       }
     }
   }

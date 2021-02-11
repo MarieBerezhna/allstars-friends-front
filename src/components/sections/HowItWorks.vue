@@ -4,7 +4,6 @@
         <div class="container">
             <div class="row py-3">
                 <div class="col-12 col-lg-6 order-0 order-lg-1 text-center">
-                    <!-- <span class="h6 w-100 text-center font-size-bold"> Join our team in 5 easy steps</span> -->
                     <div class="container-fluid py-4">
                         <div class="row border-radius-big bg-white border border-top-0  my-2">
                             <div class="col-12 col-lg-3 my-2 text-center">
