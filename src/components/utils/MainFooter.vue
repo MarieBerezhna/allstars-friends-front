@@ -13,7 +13,7 @@
                         <div class="col-12 col-lg-6">
                             <a target="_blank" href="https://allstars-it.com/ukraine/careers/">Careers</a>
                             <a target="_blank" href="https://allstars-it.com/ukraine/services/">Services</a>
-                            <a target="_blank" href="">Terms and conditions</a>
+                            <a target="_blank" href="/terms">Terms and conditions</a>
                         </div>
                         
                     </ul>

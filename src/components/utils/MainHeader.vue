@@ -10,16 +10,16 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav navbar-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="#how">How it works</a>
+                    <a class="nav-link" href="/#how">How it works</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#why">Why work with us</a>
+                    <a class="nav-link" href="/#why">Why work with us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#jobs">All vacancies</a>
+                    <a class="nav-link" href="/#jobs">All vacancies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#terms">Terms and conditions</a>
+                    <a class="nav-link" href="/terms">Terms and conditions</a>
                 </li>
             </ul>
         </div>
@@ -29,6 +29,11 @@
 <script>
 import $ from 'jquery';
     export default {
+        data () {
+            return {
+                base: location ? location.origin + '/' : ''
+            }
+        },
         methods: {
             menuActivateSwitch () {
                 
@@ -37,7 +42,8 @@ import $ from 'jquery';
                     let fromTop = $(window).scrollTop() + 300;
                     $(mainNavLinks).each((el) => {
                         let item = $(mainNavLinks[el])[0];
-                        let sid = $(item).attr('href');
+                        if ($(item).attr('href') === '/terms') return;
+                        let sid = $(item).attr('href').replace('/', '');
                         let s = $(sid)[0];
                         if (s && s.offsetTop <= fromTop &&
                             s.offsetTop + s.offsetHeight > fromTop) {
