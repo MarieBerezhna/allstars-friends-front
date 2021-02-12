@@ -33,8 +33,8 @@
                 class="w-100 border-radius my-2 p-2 border">
             </div>
             <div class="col-12">
-              <input @click="getFile()" @change="sendFile()" type="file" class="d-none file">
-              <input @click="triggerUpload($event)" type="button" value="CV" placeholder="CV"
+              <input @change="getFileName" type="file" id="file" class="d-none file">
+              <input @click="triggerUpload($event)" type="button" :value="resume"
                 class="w-100 border-radius my-2 p-2 border cursor-pointer">
             </div>
             <div class="col-12 position-relative pt-3 mt-4" style="min-height: 40px">
@@ -67,17 +67,22 @@
         email: '',
         fname: '',
         femail: '',
-        resume: ''
+        resume: 'CV'
       }
     },
+    computed: {
+      upload_val() { return document.getElementById('file') && 
+      document.getElementById('file').files.length ? 
+      document.getElementById('file').files[0].name : 'CV' }
+    },
+    
     methods: {
       triggerUpload(e) {
         let fileInp = $(e.target).parent().find('.file')[0];
         $(fileInp).trigger('click');
       },
-      getFile() {},
-      sendFile() {
-
+      getFileName() {
+        this.resume = document.getElementById('file').files[0].name;
       },
       submit() {
         let data = {
@@ -85,8 +90,10 @@
           email: this.email,
           fname: this.fname,
           femail: this.femail,
-          // resume: this.resume
+          
         };
+        const file = document.getElementById('file').files[0];
+        console.log(file)
         this.$store.dispatch('apply', data);
         if (data.name.length && data.email.length && data.fname.length && data.femail.length) {
           // send to server
@@ -102,6 +109,7 @@
     height: auto;
     min-height: 100vh;
   }
+
   .hero-content {
     padding-top: 15vh;
   }
@@ -125,8 +133,16 @@
   }
 
   @media (min-width: 992px) {
-    h1 { font-size: 2.5rem;}
-    .hero-content { padding-top: 50vh;}
-    .section { padding: 70px; }
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .hero-content {
+      padding-top: 50vh;
+    }
+
+    .section {
+      padding: 70px;
+    }
   }
 </style>

@@ -26,6 +26,9 @@ export default new Vuex.Store({
                 referrer_name: data.name,
                 referrer_email: data.email
             };
+             const file = document.getElementById('file').files[0];
+             const fd = new FormData();
+             fd.append('resume', file);
             axios.post(`${api}/apply`, { data: wrapper })
                 .then(response => {
                     console.log(response, commit);
