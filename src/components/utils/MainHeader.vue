@@ -36,7 +36,6 @@ import $ from 'jquery';
         },
         methods: {
             menuActivateSwitch () {
-               console.log(window.location.pathname);
                if (window.location.pathname === '/terms') {
                    $('.nav-item:last-child .nav-link').addClass('active');
                }

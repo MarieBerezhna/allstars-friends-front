@@ -6,9 +6,6 @@ const api = location.hostname === 'localhost' ?
     'http://localhost:8083' :
     'https://hr-backoffice.allstars-it.com';
 
-
-console.log(api);
-
 Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
