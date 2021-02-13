@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const api = location.hostname === 'localhost' ?
     'http://localhost:8083' :
-    'https://hr-backoffice.allstars-it.com/';
+    'https://hr-backoffice.allstars-it.com';
 
 
 console.log(api);
@@ -28,8 +28,9 @@ export default new Vuex.Store({
             };
              const file = document.getElementById('file').files[0];
              const fd = new FormData();
-             fd.append('resume', file);
-            axios.post(`${api}/apply`, { data: wrapper })
+            fd.append('resume', file);
+            fd.append('data', JSON.stringify(wrapper));
+            axios.post(`${api}/apply/${data.femail}`, fd)
                 .then(response => {
                     console.log(response, commit);
                 });
