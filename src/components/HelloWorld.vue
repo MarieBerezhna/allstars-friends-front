@@ -3,7 +3,7 @@
     <div id="hero" class="container position-relative">
       <div class="row hero-content mx-auto position-lg-absolute w-100 h-100">
         <div class="col-12 col-lg-8 text-white pt-lg-5">
-          <h1 class="display-lg-4 pt-lg-5">RECCOMEND YOUR <br>
+          <h1 class="display-lg-4 pt-lg-5">RECOMMEND YOUR <br>
             FRIEND AND GET <br>
             1000$ - 2000$ BONUS!
 
@@ -95,7 +95,7 @@
         const file = document.getElementById('file').files[0];
         console.log(file)
         this.$store.dispatch('apply', data);
-        if (data.name.length && data.email.length && data.fname.length && data.femail.length) {
+        if (data.name.length && data.email.length && data.fname.length && data.femail.length && file) {
           // send to server
         } else {
           // display err
