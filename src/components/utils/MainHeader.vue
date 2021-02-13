@@ -10,16 +10,16 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav navbar-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="/#how">How It Works</a>
+                    <a class="nav-link" href="/#how">How it works</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/#why">Why Work With Us</a>
+                    <a class="nav-link" href="/#why">Why work with us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/#jobs">All Vacancies</a>
+                    <a class="nav-link" href="/#jobs">All vacancies</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/terms">Terms And Conditions</a>
+                    <a class="nav-link" href="/terms">Terms and conditions</a>
                 </li>
             </ul>
         </div>
@@ -36,10 +36,7 @@ import $ from 'jquery';
         },
         methods: {
             menuActivateSwitch () {
-               console.log(window.location.pathname);
-               if (window.location.pathname === '/terms') {
-                   $('.nav-item:last-child .nav-link').addClass('active');
-               }
+                
                 let mainNavLinks = $(".nav-link");
                 window.document.body.onscroll = (() => {
                     let fromTop = $(window).scrollTop() + 300;
@@ -74,7 +71,7 @@ import $ from 'jquery';
 }
     .navbar, .navbar-dark {
         background: black;
-        opacity: 0.7;
+        opacity: 0.75;
     }
     @media (min-width: 992px) {
         .navbar-center {
