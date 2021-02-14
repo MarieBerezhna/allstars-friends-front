@@ -20,7 +20,7 @@
             <div class="col-12 col-lg-6">
               <label for="email">email</label>
               <input type="text" name="email" id="email" v-model="email" placeholder="email"
-                class="w-100 border-radius my-2 p-2 border">
+                class="w-100 border-radius my-2 p-2 border" pattern="/^\S+@\S+\.\S+$/">
             </div>
             <div class="col-12 col-lg-6">
               <label for="fname">fname</label>
@@ -47,6 +47,7 @@
     <HowItWorks id="how" class="section" />
     <WhyUs id="why" class="section" />
     <JobOpenings id="jobs" class="section" />
+    <ModalWindow :heading="modalHeading" :text="modalText" :show="modalShow" />
   </div>
 </template>
 
@@ -55,11 +56,13 @@
   import HowItWorks from '@/components/sections/HowItWorks';
   import WhyUs from '@/components/sections/WhyUs';
   import JobOpenings from '@/components/sections/JobOpenings';
+  import ModalWindow from '@/components/utils/ModalWindow';
   export default {
     components: {
       HowItWorks,
       WhyUs,
-      JobOpenings
+      JobOpenings,
+      ModalWindow
     },
     data() {
       return {
@@ -67,7 +70,10 @@
         email: '',
         fname: '',
         femail: '',
-        resume: 'CV'
+        resume: 'CV',
+        modalHeading: 'frre',
+        modalText: 'frwerg',
+        modalShow: false
       }
     },
     computed: {
