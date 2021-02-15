@@ -47,7 +47,7 @@
     <HowItWorks id="how" class="section" />
     <WhyUs id="why" class="section" />
     <JobOpenings id="jobs" class="section" />
-    <ModalWindow :heading="modalHeading" :text="modalText" :show="modalShow" />
+    <ModalWindow :heading="modalHeading" :text="modalText" :show="modalShow" :error="modalError" />
   </div>
 </template>
 
@@ -71,17 +71,20 @@
         fname: '',
         femail: '',
         resume: 'CV',
-        modalHeading: 'frre',
-        modalText: 'frwerg',
+        modalHeading: '',
+        modalText: '',
+        modalError: false,
         modalShow: false
       }
     },
     computed: {
-      upload_val() { return document.getElementById('file') && 
-      document.getElementById('file').files.length ? 
-      document.getElementById('file').files[0].name : 'CV' }
+      upload_val() {
+        return document.getElementById('file') &&
+          document.getElementById('file').files.length ?
+          document.getElementById('file').files[0].name : 'CV'
+      }
     },
-    
+
     methods: {
       triggerUpload(e) {
         let fileInp = $(e.target).parent().find('.file')[0];
@@ -96,15 +99,38 @@
           email: this.email,
           fname: this.fname,
           femail: this.femail,
-          
+
         };
-        const file = document.getElementById('file').files[0];
-        console.log(file)
-        this.$store.dispatch('apply', data);
-        if (data.name.length && data.email.length && data.fname.length && data.femail.length && file) {
+        // const file = document.getElementById('file').files[0];
+
+        if (data.name.length && data.email.length && data.fname.length && data.femail.length) {
           // send to server
+          this.$store.dispatch('apply', data).then(res => {
+
+            if (!res.data.error) {
+              this.modalError = false
+              this.modalHeading = res.data.message
+              this.modalText = 'Thank you!'
+            } else {
+              this.modalError = true
+              this.modalHeading = 'Error'
+              this.modalText = res.data.message
+            }
+
+            this.modalShow = true
+            console.log(res)
+          });
         } else {
-          // display err
+          
+          $('input[type="text"]').each(el => {
+            let item = $('input')[el];
+            if (!item.value) {
+              $(item).addClass('border-danger');
+              $(item).on('focus', () => {
+                $(item).removeClass('border-danger');
+              });
+            }
+          })
         }
       }
     }

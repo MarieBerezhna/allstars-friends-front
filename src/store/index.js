@@ -11,11 +11,11 @@ export default new Vuex.Store({
     state: {
         campaign_id: 2
     },
-    mutations: {},
+    mutations: {
+        applied () {}
+    },
     actions: {
-        apply({
-            commit
-        }, data) {
+        apply({ commit }, data) {
             let wrapper = {
                 campaign_id: this.state.campaign_id,
                 name: data.fname,
@@ -23,14 +23,18 @@ export default new Vuex.Store({
                 referrer_name: data.name,
                 referrer_email: data.email
             };
-             const file = document.getElementById('file').files[0];
-             const fd = new FormData();
+            const file = document.getElementById('file').files[0];
+            const fd = new FormData();
             fd.append('resume', file);
             fd.append('data', JSON.stringify(wrapper));
-            axios.post(`${api}/apply/${data.femail}`, fd)
-                .then(response => {
-                    console.log(response, commit);
-                });
+            
+            return new Promise((resolve, reject) => {
+                axios.post(`${api}/apply/${data.femail}`, fd)
+                    .then(response => {
+                        resolve(response);
+                        commit('applied');
+                    }).catch(err => reject(err));
+            });
         }
     }
 });

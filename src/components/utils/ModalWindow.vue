@@ -3,7 +3,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">{{ heading }}</h5>
+        <h5 class="modal-title" :class="error ? 'text-danger' : 'text-success' ">{{ heading }}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -26,7 +26,8 @@
         props: {
             heading: String,
             text: String,
-            show: Boolean
+            show: Boolean,
+            error: Boolean
         },
         methods: {
             modalHide () {
