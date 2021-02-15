@@ -19,8 +19,9 @@
             </div>
             <div class="col-12 col-lg-6">
               <label for="email">email</label>
-              <input type="text" name="email" id="email" v-model="email" placeholder="email"
-                class="w-100 border-radius my-2 p-2 border" pattern="/^\S+@\S+\.\S+$/">
+              <input type="text" name="email" id="email" v-model="email" 
+              placeholder="email" data-type="email"
+                class="w-100 border-radius my-2 p-2 border" >
             </div>
             <div class="col-12 col-lg-6">
               <label for="fname">fname</label>
@@ -29,8 +30,9 @@
             </div>
             <div class="col-12 col-lg-6">
               <label for="femail">femail</label>
-              <input type="text" name="femail" id="femail" v-model="femail" placeholder="friend's email"
-                class="w-100 border-radius my-2 p-2 border">
+              <input type="text" name="femail" id="femail" v-model="femail"
+               placeholder="friend's email" data-type="email"
+                class="w-100 border-radius my-2 p-2 border" >
             </div>
             <div class="col-12">
               <input @change="getFileName" type="file" id="file" class="d-none file">
@@ -93,6 +95,12 @@
       getFileName() {
         this.resume = document.getElementById('file').files[0].name;
       },
+      errHighlight (item) {
+                      $(item).addClass('border-danger');
+              $(item).on('focus', () => {
+                $(item).removeClass('border-danger');
+              });
+      },
       submit() {
         let data = {
           name: this.name,
@@ -101,34 +109,42 @@
           femail: this.femail,
 
         };
-        // const file = document.getElementById('file').files[0];
+        let emailRegex = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/g;
 
         if (data.name.length && data.email.length && data.fname.length && data.femail.length) {
           // send to server
-          this.$store.dispatch('apply', data).then(res => {
+          if (data.email.match(emailRegex) && data.femail.match(emailRegex)) {
+            this.$store.dispatch('apply', data).then(res => {
 
-            if (!res.data.error) {
-              this.modalError = false
-              this.modalHeading = res.data.message
-              this.modalText = 'Thank you!'
-            } else {
-              this.modalError = true
-              this.modalHeading = 'Error'
-              this.modalText = res.data.message
-            }
+              if (!res.data.error) {
+                this.modalError = false
+                this.modalHeading = res.data.message
+                this.modalText = 'Thank you!'
+              } else {
+                this.modalError = true
+                this.modalHeading = 'Error'
+                this.modalText = res.data.message
+              }
+              this.modalShow = true
 
-            this.modalShow = true
-            console.log(res)
-          });
+            });
+          } else {
+            $('input[data-type="email"]').each(el => {
+              let item = $('input[data-type="email"]')[el]
+              console.log($(item).val())
+              if (!$(item).val().match(emailRegex)) { 
+                   this.errHighlight(item)
+              }
+            }); 
+            
+          }
+
         } else {
-          
+
           $('input[type="text"]').each(el => {
             let item = $('input')[el];
             if (!item.value) {
-              $(item).addClass('border-danger');
-              $(item).on('focus', () => {
-                $(item).removeClass('border-danger');
-              });
+              this.errHighlight(item)
             }
           })
         }
