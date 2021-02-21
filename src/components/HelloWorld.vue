@@ -131,7 +131,6 @@
           } else {
             $('input[data-type="email"]').each(el => {
               let item = $('input[data-type="email"]')[el]
-              console.log($(item).val())
               if (!$(item).val().match(emailRegex)) { 
                    this.errHighlight(item)
               }

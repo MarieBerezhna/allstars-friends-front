@@ -32,6 +32,7 @@
         methods: {
             modalHide () {
                 document.getElementsByClassName('modal')[0].style.display = 'none';
+                location.reload();
             }
         }
     }
