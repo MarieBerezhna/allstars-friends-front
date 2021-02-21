@@ -27,9 +27,9 @@ export default new Vuex.Store({
             const fd = new FormData();
             fd.append('resume', file);
             fd.append('data', JSON.stringify(wrapper));
-            
+     
             return new Promise((resolve, reject) => {
-                axios.post(`${api}/apply/${data.femail}`, fd)
+                axios.post(`${api}/apply/${this.state.campaign_id}/${data.femail}`, fd)
                     .then(response => {
                         resolve(response);
                         commit('applied');
