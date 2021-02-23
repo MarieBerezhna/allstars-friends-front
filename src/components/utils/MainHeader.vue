@@ -78,8 +78,8 @@ import $ from 'jquery';
     @media (min-width: 992px) {
         .navbar-center {
             position: absolute;
-            left: 60%;
-            transform: translatex(-50%);
+            left: 50%;
+            transform: translatex(-40%);
         }
         .navbar-brand {
             margin-left: 15vw;
