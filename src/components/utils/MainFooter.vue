@@ -25,7 +25,7 @@
                     <a target="_blank" href="https://www.linkedin.com/company/allstars-it-ukraine/" class="fa fa-linkedin"></a>
                     <a target="_blank" href="https://www.youtube.com/channel/UCDy8_6Z0qY8RxDVrxTXGazA" class="fa fa-youtube"></a>
                     <a target="_blank" href="https://www.instagram.com/allstarsitcom/" class="fa fa-instagram"></a>
-                    <a target="_blank" href="https://t.me/links4yourobot?start=allstarsitukraine" class="fa fa-telegram" ></a>
+                    <a target="_blank" href="https://t.me/AllStarsITukraine" class="fa fa-telegram" ></a>
     
 
                     </div>
