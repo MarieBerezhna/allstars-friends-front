@@ -21,10 +21,10 @@
                 <div class="col-10 col-lg-5 py-5 pl-lg-5 text-center text-dark social-links mx-auto">
                     <div class="row pt-lg-5 pl-lg-5 mt-lg-5">
  
-                    <a target="_blank" href="https://www.facebook.com/allstarsitcom" class="fa fa-facebook"></a>
+                    <a target="_blank" href="https://www.facebook.com/allstarsitukraine" class="fa fa-facebook"></a>
                     <a target="_blank" href="https://www.linkedin.com/company/allstars-it-ukraine/" class="fa fa-linkedin"></a>
                     <a target="_blank" href="https://www.youtube.com/channel/UCDy8_6Z0qY8RxDVrxTXGazA" class="fa fa-youtube"></a>
-                    <a target="_blank" href="https://www.instagram.com/allstarsitcom/" class="fa fa-instagram"></a>
+                    <a target="_blank" href="https://www.instagram.com/allstars_it_ukraine/" class="fa fa-instagram"></a>
                     <a target="_blank" href="https://t.me/AllStarsITukraine" class="fa fa-telegram" ></a>
     
 

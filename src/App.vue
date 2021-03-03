@@ -57,7 +57,9 @@ body > * {
     padding-right: 0;
     padding-left: 0;
   }
-
+a:hover {
+      text-decoration: none !important;
+}
   .border-radius-big {
     border-radius: 25px !important;
   }
