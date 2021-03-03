@@ -6,14 +6,14 @@
                      <img :src="require('@/assets/logo.png')" alt="Allstars-IT" width="150" height="auto">
                     <ul class="row py-4">
                         <div class="col-12 col-lg-6">
-                            <a target="_blank" href="https://allstars-it.com/">About us</a>
-                            <a target="_blank" href="https://allstars-it.com/ukraine/contact-us/">Contact us</a>
-                            <a target="_blank" href="https://allstars-it.com/ukraine/blog/">Blog</a>
+                            <a target="_blank" rel="noreferrer" href="https://allstars-it.com/">About us</a>
+                            <a target="_blank" rel="noreferrer" href="https://allstars-it.com/ukraine/contact-us/">Contact us</a>
+                            <a target="_blank" rel="noreferrer" href="https://allstars-it.com/ukraine/blog/">Blog</a>
                         </div>
                         <div class="col-12 col-lg-6">
-                            <a target="_blank" href="https://allstars-it.com/ukraine/careers/">Careers</a>
-                            <a target="_blank" href="https://allstars-it.com/ukraine/services/">Services</a>
-                            <a target="_blank" href="/terms">Terms and conditions</a>
+                            <a target="_blank" rel="noreferrer" href="https://allstars-it.com/ukraine/careers/">Careers</a>
+                            <a target="_blank" rel="noreferrer" href="https://allstars-it.com/ukraine/services/">Services</a>
+                            <a target="_blank"  href="/terms">Terms and conditions</a>
                         </div>
                         
                     </ul>
@@ -21,11 +21,11 @@
                 <div class="col-10 col-lg-5 py-5 pl-lg-5 text-center text-dark social-links mx-auto">
                     <div class="row pt-lg-5 pl-lg-5 mt-lg-5">
  
-                    <a target="_blank" href="https://www.facebook.com/allstarsitukraine" class="fa fa-facebook"></a>
-                    <a target="_blank" href="https://www.linkedin.com/company/allstars-it-ukraine/" class="fa fa-linkedin"></a>
-                    <a target="_blank" href="https://www.youtube.com/channel/UCDy8_6Z0qY8RxDVrxTXGazA" class="fa fa-youtube"></a>
-                    <a target="_blank" href="https://www.instagram.com/allstars_it_ukraine/" class="fa fa-instagram"></a>
-                    <a target="_blank" href="https://t.me/AllStarsITukraine" class="fa fa-telegram" ></a>
+                    <a target="_blank" rel="noreferrer" href="https://www.facebook.com/allstarsitukraine" class="fa fa-facebook"></a>
+                    <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/allstars-it-ukraine/" class="fa fa-linkedin"></a>
+                    <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCDy8_6Z0qY8RxDVrxTXGazA" class="fa fa-youtube"></a>
+                    <a target="_blank" rel="noreferrer" href="https://www.instagram.com/allstars_it_ukraine/" class="fa fa-instagram"></a>
+                    <a target="_blank" rel="noreferrer" href="https://t.me/AllStarsITukraine" class="fa fa-telegram" ></a>
     
 
                     </div>
@@ -35,13 +35,6 @@
         </div>
     </div>
 </template>
-
-<script>
-    export default {
-        
-    }
-</script>
-
 <style scoped>
 img {
     margin-left: 40px;
