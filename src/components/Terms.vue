@@ -19,7 +19,7 @@
                     </a>
                 </div>
             </nav>
-            <div class="content p-3 border-right border-left border-bottom rounded-bottom bg-white">
+            <div class="content p-md-3 border-right border-left border-bottom rounded-bottom bg-white">
                 <div class="tab" id="en">
                     <h1 class="text-center h3">
                         TERMS
@@ -714,4 +714,13 @@
     ol>li>ol>li:before {
         content: counters(item, ".") " ";
     }
+    li {
+        padding-right: 5%;
+        font-size: 1rem !important;
+    }
+      @media (min-width: 992px) {
+              li {
+        padding-right: unset;
+    }
+      }
 </style>
