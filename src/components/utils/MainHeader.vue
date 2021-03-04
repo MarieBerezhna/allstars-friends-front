@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-1">
         <a class="navbar-brand logo" href="/">
-            <img :src="require('@/assets/logo.png')" alt="Allstars-IT" width="100" height="auto">
+            <img :src="require('@/assets/logo.png')" alt="Allstars-IT" width="150" height="auto">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
