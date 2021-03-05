@@ -1,5 +1,5 @@
 <template>
-    <div class="terms py-5">
+    <div class="terms pt-5">
         <div class="row text-center mx-auto w-75 pt-5">
             <div v-show="activeTab === 'en'" class="tab-header text-center mx-auto">
                 <h1 class="text-center h3">
@@ -21,7 +21,7 @@
 
             </div>
         </div>
-        <div class="terms-inner bg-light border rounded box-shadow my-5 p-3">
+        <div class="terms-inner bg-light border rounded box-shadow mt-5 p-3">
 
             <nav class="row text-center mx-auto ">
                 <div class="tab-link col-5 offset-2 col-md-1 offset-md-9">
