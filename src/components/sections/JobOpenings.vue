@@ -7,7 +7,8 @@
                     <img :src="require('@/assets/jobs.png')" alt="hot job openings" class="w-75">
                     <p class="text-left p-3 font-weight-bold lead">
                         Get $1000 for recommending your friend or colleague for Middle/Senior position after they sign
-                        an offer.<br>
+                        an offer.
+                    <br><br>
                         Get $2000 for recommending your friend or colleague for Team Lead, Tech Lead, Senior Devops or
                         Software Artichects position after they sign an offer.
                     </p>
