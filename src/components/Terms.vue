@@ -1,35 +1,51 @@
 <template>
-    <div class="terms container py-5">
+    <div class="terms py-5">
+        <div class="row text-center mx-auto w-75 pt-5">
+            <div v-show="activeTab === 'en'" class="tab-header text-center mx-auto">
+                <h1 class="text-center h3">
+                    TERMS
+                </h1>
+                <h2 class="text-center h5">
+                    REFERENCE PROGRAM
+                    "INVITE A FRIEND"
+                </h2>
+            </div>
+            <div v-show="activeTab === 'ua'" class="tab-header  text-center mx-auto">
+                <h1 class="text-center h3">
+                    ПРАВИЛА
+                </h1>
+                <h2 class="text-center h5">
+                    РЕФЕРАЛЬНОЇ ПРОГРАМИ
+                    «ЗАПРОСИ ДРУГА»
+                </h2>
+
+            </div>
+        </div>
         <div class="terms-inner bg-light border rounded box-shadow my-5 p-3">
+
             <nav class="row text-center mx-auto ">
-                <div class="tab-link col rounded-top bg-white border-top border-left border-right">
+                <div class="tab-link col-5 offset-2 col-md-1 offset-md-9">
                     <a href="#en" @click.prevent="tabSwitch($event)" class="d-block h-100 w-100 py-1">
                         <img :src="require('../assets/usa.png')" alt="english" width="20" height="20" class="mb-1">
-                        <span>
-                            English
+                        <span class="mx-2 text-dark font-weight-bold" :class="activeTab === 'en' ? 'border-bottom border-5 border-dark': ''">
+                            ENG
                         </span>
                     </a>
                 </div>
-                <div class="tab-link col border-bottom rounded-bottom">
+                <div class="tab-link col col-md-1">
                     <a href="#ua" @click.prevent="tabSwitch($event)" class="d-block h-100 w-100 py-1">
                         <img :src="require('../assets/ua.png')" alt="english" width="20" height="20" class="mb-1">
-                        <span>
-                            Ukrainian
+                        <span class="mx-2 text-dark font-weight-bold" :class="activeTab === 'ua' ? 'border-bottom border-5 border-dark': ''">
+                            UKR
                         </span>
                     </a>
                 </div>
             </nav>
-            <div class="content p-md-3 border-right border-left border-bottom rounded-bottom bg-white">
+            <div class="content p-md-3 pt-5 mx-lg-5">
                 <div class="tab" id="en">
-                    <h1 class="text-center h3">
-                        TERMS
-                    </h1>
-                    <h2 class="text-center h5">
-                        REFERENCE PROGRAM
-                        "INVITE A FRIEND"
-                    </h2>
+
                     <ol>
-                        <li> <strong>GENERAL PROVISIONS</strong> 
+                        <li> <strong>GENERAL PROVISIONS</strong>
                             <ol>
                                 <li> These rules (hereinafter - the Rules) determine the procedure and conditions of
                                     participation in the Referral Program "Invite a friend" (hereinafter - the Program).
@@ -91,7 +107,7 @@
                             </ol>
                         </li>
                         <li> <strong>PROCEDURE FOR PARTICIPATION IN THE PROGRAM</strong>
-                            
+
                             <ol>
                                 <li> A person who wishes to participate in the Program as a Referee and meets all the
                                     criteria set forth in the Rules shall submit a Referral Notice (which must meet all
@@ -255,7 +271,7 @@
                                 </li>
                             </ol>
                         </li>
-                        <li> <strong>REFERRAL CONTRACT AGREEMENT AND REWARD PAYMENT</strong> 
+                        <li> <strong>REFERRAL CONTRACT AGREEMENT AND REWARD PAYMENT</strong>
                             <ol>
                                 <li>The Notification of the Referee participates in the Program within two calendar
                                     months from the moment of sending by the Organizer of the e-mail to the Referee with
@@ -318,7 +334,7 @@
                                     due to him to the Referee in non-cash form.</li>
                             </ol>
                         </li>
-                        <li> <strong>ADDITIONAL CONDITIONS</strong> 
+                        <li> <strong>ADDITIONAL CONDITIONS</strong>
                             <ol>
                                 <li>By participating in the Program, the Referee and Referral confirm that they have
                                     been duly notified of the purpose of collecting their Personal Data, the composition
@@ -342,17 +358,8 @@
                     </ol>
                 </div>
                 <div class="tab" id="ua">
-                    <h1 class="text-center h3">
-                        ПРАВИЛА
-                    </h1>
-                    <h2 class="text-center h5">
-                        РЕФЕРАЛЬНОЇ ПРОГРАМИ
-                        «ЗАПРОСИ ДРУГА»
-
-                    </h2>
-
                     <ol>
-                        <li> <strong>ЗАГАЛЬНІ ПОЛОЖЕННЯ</strong> 
+                        <li> <strong>ЗАГАЛЬНІ ПОЛОЖЕННЯ</strong>
                             <ol>
                                 <li>Цими правилами (надалі – Правила) визначається порядок та умови участі у Реферальній
                                     програмі “Запроси друга” (надалі – Програма).</li>
@@ -410,7 +417,7 @@
                                     Реферала.</li>
                             </ol>
                         </li>
-                        <li> <strong>ПОРЯДОК УЧАСТІ У ПРОГРАМІ</strong> 
+                        <li> <strong>ПОРЯДОК УЧАСТІ У ПРОГРАМІ</strong>
                             <ol>
                                 <li>Особа, яка бажає прийняти участь у Програмі в якості Рефера, та відповідає всім
                                     критеріям, передбаченими Правилами, подає Повідомлення про Реферала (який має
@@ -564,7 +571,7 @@
                                 </li>
                             </ol>
                         </li>
-                        <li> <strong>УКЛАДЕННЯ ДОГОВОРУ ІЗ РЕФЕРАЛОМ ТА ВИПЛАТА ВИНАГОРОДИ</strong> 
+                        <li> <strong>УКЛАДЕННЯ ДОГОВОРУ ІЗ РЕФЕРАЛОМ ТА ВИПЛАТА ВИНАГОРОДИ</strong>
                             <ol>
                                 <li>Повідомлення Рефера приймає участь у Програмі протягом двох календарних місяців з
                                     моменту надіслання Організатором електронного листа Реферу з підтвердженням, що
@@ -625,7 +632,7 @@
                                 </li>
                             </ol>
                         </li>
-                        <li> <strong>ДОДАТКОВІ УМОВИ</strong> 
+                        <li> <strong>ДОДАТКОВІ УМОВИ</strong>
                             <ol>
                                 <li>Приймаючи участь в Програмі, Рефер та Реферал підтверджують, що їх належним чином
                                     повідомлено про мету збирання їх Персональних даних, склад і зміст зібраних даних,
@@ -655,17 +662,30 @@
 <script>
     import $ from 'jquery';
     export default {
+        data() {
+            return {
+                activeTab: 'en'
+            }
+        },
         methods: {
             tabSwitch(e) {
                 let tar = $(e.target).children().length ? e.target : $(e.target).parent();
                 let id = $(tar).attr('href');
-                $('.tab-link.bg-white').removeClass('bg-white border-top border-left border-right')
-                    .addClass('border-bottom rounded-bottom');
-                $(tar).parent().addClass('bg-white border-top border-left border-right')
-                    .removeClass('border-bottom rounded-bottom');
+                this.activeTab = id.replace('#', '');
                 $('.tab').hide();
                 $(id).show();
             }
+        },
+        mounted() {
+            $('head').append(`
+            <style>
+              body::after {
+
+    background: radial-gradient(rgba(255, 255, 255, 0.9), rgba(250, 250, 250, 1));
+    opacity: 0.6;
+  }
+            </style>
+            `)
         }
     }
 </script>
@@ -714,13 +734,15 @@
     ol>li>ol>li:before {
         content: counters(item, ".") " ";
     }
+
     li {
         padding-right: 5%;
         font-size: 1rem !important;
     }
-      @media (min-width: 992px) {
-              li {
-        padding-right: unset;
+
+    @media (min-width: 992px) {
+        li {
+            padding-right: unset;
+        }
     }
-      }
 </style>
