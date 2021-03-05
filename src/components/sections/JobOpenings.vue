@@ -3,15 +3,20 @@
         <h2 class="font-size-bold w-100 text-center my-3">Hot Jobs</h2>
         <div class="container py-3">
             <div class="row">
-                <div class="col-12 col-lg-5  text-center">
+                <div class="col-12 col-lg-5 position-relative text-center">
                     <img :src="require('@/assets/jobs.png')" alt="hot job openings" class="w-75">
-                    <p class="text-left p-3 font-weight-bold lead">
+                    <p class="text-left p-3 pb-0 font-weight-bold lead">
                         Get $1000 for recommending your friend or colleague for Middle/Senior position after they sign
                         an offer.
                     <br><br>
                         Get $2000 for recommending your friend or colleague for Team Lead, Tech Lead, Senior Devops or
                         Software Artichects position after they sign an offer.
                     </p>
+                    <div class="wrapper position-absolute"  style="bottom:0; left: 20%; right: 20%; heigth: 15%">
+                            <a href="https://allstars-it.com/ukraine/careers/" rel="noreferrer" target="_blank" class="btn btn-purple border-radius-big w-100 mx-auto">
+                            Check Hot Jobs
+                            </a>
+                        </div>
                 </div>
                 <div class="col-12 col-lg-7">
                     <div class="row">
