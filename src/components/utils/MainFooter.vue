@@ -1,6 +1,7 @@
 <template>
-    <div class="bg-dark pt-lg-5">
-        <div class="container text-light pt-5">
+    <div class="bg-white">
+        <div class="container-fluid footer text-light">
+            <div class="container  pt-5">
             <div class="row">
                 <div class="col-12 col-lg-6">
                      <img :src="require('@/assets/logo.png')" alt="Allstars-IT" width="150" height="auto">
@@ -25,17 +26,22 @@
                     <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/allstars-it-ukraine/" class="fa fa-linkedin"></a>
                     <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UCDy8_6Z0qY8RxDVrxTXGazA" class="fa fa-youtube"></a>
                     <a target="_blank" rel="noreferrer" href="https://www.instagram.com/allstars_it_ukraine/" class="fa fa-instagram"></a>
-                    <a target="_blank" rel="noreferrer" href="https://t.me/AllStarsITukraine" class="fa fa-telegram" ></a>
-    
+                    <!-- <a target="_blank" rel="noreferrer" href="https://t.me/AllStarsITukraine" class="fa fa-telegram" ></a> -->
 
                     </div>
 
                 </div>
             </div>
+            </div>
+
         </div>
     </div>
 </template>
 <style scoped>
+.footer {
+    background-color: black;
+        opacity: 0.8;
+}
 img {
     margin-left: 40px;
 }
