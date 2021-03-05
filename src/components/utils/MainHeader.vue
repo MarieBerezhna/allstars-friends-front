@@ -16,7 +16,7 @@
                     <a class="nav-link" href="/#why">Why Work With Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/#jobs">Hot Vacancies</a>
+                    <a class="nav-link" href="/#jobs">Hot Jobs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/terms">Terms And Conditions</a>

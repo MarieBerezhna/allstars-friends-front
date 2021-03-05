@@ -50,7 +50,7 @@
                         </p>
                         <div class="wrapper position-relative h-25">
                             <a href="https://allstars-it.com/ukraine/careers/" rel="noreferrer" target="_blank" class="btn btn-purple border-radius-big w-100 mx-auto">
-                            Check our job openings
+                            Check Hot Jobs
                             </a>
                         </div>
 

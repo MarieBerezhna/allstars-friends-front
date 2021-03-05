@@ -1,6 +1,6 @@
 <template>
     <div class="container-fluid bg-white  pt-5">
-        <h2 class="font-size-bold w-100 text-center my-3">Hot Vacancies</h2>
+        <h2 class="font-size-bold w-100 text-center my-3">Hot Jobs</h2>
         <div class="container py-3">
             <div class="row">
                 <div class="col-12 col-lg-5  text-center">
